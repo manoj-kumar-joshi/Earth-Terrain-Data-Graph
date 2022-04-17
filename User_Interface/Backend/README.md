@@ -7,6 +7,11 @@ This is a REST API example based on Node.js and axios, following the **MVC patte
 The application is **production ready**, and can be used behind a Nginx reverse proxy securely.
 
 ---
+## Prerequisites
+Make sure you have installed all of the following prerequisites on your development machine:
+* TigerGraph - [Download & Install TigerGraph](https://docs.tigergraph.com/tigergraph-server/current/installation/install).
+* Enable RestApp - [Enable RestApp TigerGraph](https://docs.tigergraph.com/tigergraph-server/current/api/authentication) 
+* Generate Secret Token - [TigerGraph Secret](https://docs.tigergraph.com/tigergraph-server/current/user-access/managing-credentials#_create_a_secre)
 
 #### To start setting up the project
 
