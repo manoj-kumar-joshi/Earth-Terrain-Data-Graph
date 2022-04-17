@@ -10,6 +10,7 @@ The application is **production ready**, and can be used behind a Nginx reverse 
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
 * TigerGraph - [Download & Install TigerGraph](https://docs.tigergraph.com/tigergraph-server/current/installation/install).
+* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. 
 * Enable RestApp - [Enable RestApp TigerGraph](https://docs.tigergraph.com/tigergraph-server/current/api/authentication) 
 * Generate Secret Token - [TigerGraph Secret](https://docs.tigergraph.com/tigergraph-server/current/user-access/managing-credentials#_create_a_secre)
 
