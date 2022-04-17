@@ -16,7 +16,7 @@ Step 1: Clone the repo
 git clone https://github.com/ElectronBridge/Earth-Terrain-Data-Graph.git
 ```
 
-Step 2: cd into the cloned repo and run:
+Step 2: cd into the cloned repo and run install command:
 
 ```bash
 cd Earth-Terrain-Data-Graph/User_Interface/Backend
