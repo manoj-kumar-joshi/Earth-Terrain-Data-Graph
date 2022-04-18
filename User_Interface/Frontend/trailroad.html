@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tigergraph Challenge</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
+  <style>
+    .map-container {
+      
+      height: 450px;
+      /* position: absolute;*/
+      width: 95%;
+      padding-left: 2.5%;
+      border-radius: 15px;
+      margin-bottom: 2px;
+    }
+
+    .mapdiv {
+      background: transparent;
+      position: relative;
+      margin-bottom: 2px;
+    }
+
+    .calculation-box {
+
+      width: 45%;
+      position: absolute;
+      top: 15%;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 5px;
+      text-align: center;
+    }
+    .coordinates {
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+      position: absolute;
+      bottom: 30px;
+      left: 10px;
+      padding: 2px;
+      margin: 0ox;
+      font-size: 12px;
+      line-height: 18px;
+      border-radius: 3px;
+      display: none;
+      }
+    .map-overlay2 {
+
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      background: transparent;
+      /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      position: relative;*/
+      top: 10px;
+      bottom: 5px;
+      padding: 1px;
+      display: none;
+    }
+
+    .calculation-box .legend .bar {
+      height: 10px;
+      width: 100%;
+
+      background: linear-gradient(to right, #55f704, #8f0305);
+    }
+
+    .buttonbox {
+
+      position: absolute;
+      top: 15%;
+      right: 10px;
+    }
+
+    .buttoncamera {
+      display: none;
+      position: absolute;
+      top: 25%;
+      right: 10px;
+    }
+
+    .buttonbox_grp {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .buttonbox_grp1 {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+    }
+    p {
+      font-family: 'Open Sans';
+      margin: 0;
+      font-size: 13px;
+    }
+
+
+    #functions {
+      display: inline-block;
+      margin-top:30px;
+    }
+    
+    #functions ul {
+        list-style:none;
+    }
+    
+    .func_desc{
+      float:left;
+    }
+    
+    i{
+      padding: 10px;
+    }
+    
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #MSvideoContainer {
+      width: 32%;
+     height: 20%;
+    margin-left: 35%;
+    margin-top: 1%;
+    display: inline-block;
+    background:  url("assets/img/imageedit_7_9995803446.png") center center no-repeat;
+    background-size:contain;
+   
+    }
+    
+    #MSvideoContent {
+      height: 22%;
+      width: 91%;
+      padding-top: 15%;
+      padding-left: 12%;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+    .active, #functions li .small_title:hover {
+        color: #e2038b;
+        cursor:pointer;
+    }
+    
+    .function_desc{
+      display:inline-block;
+      float:left;
+      color: black;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.css"
+    type="text/css">
+  <script src="https://unpkg.com/h3-js"></script>
+</head>
+
+<body >
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">ElectronBridge</span>
+      </a>
+      <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+    </div>
+
+
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" style="margin-right: 20px;">
+            <i class="bi bi-github"></i>
+
+          </a>
+
+
+        </li>
+
+
+
+      </ul>
+      
+    </nav>
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <!-- <ul class="sidebar-nav" id="sidebar-nav">
+
+
+
+      <li class="nav-item">
+        <a class="nav-link " data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Use Cases</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="index.html">
+              <i class="bi bi-circle"></i><span>Road To Pipeline layout</span>
+            </a>
+          </li>
+          <li>
+            <a href="trailroad.html" class="active">
+              <i class="bi bi-circle"></i><span>Discover Trail To Road</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+
+    </ul> -->
+    <div class="col-lg-12">
+
+      <div class="card basic">
+        <div class="card-body">
+	<h5 class="card-title">Overview</h5>
+		<div>
+            		<p>This is a simple mobile application like user interface to TG query "tg_walkable_trail_to_nearest_road". This query searches for the smoothest shortest path to the nearest documented road or a trail. Application using this query may be useful to anyone in the mountain or uncharted terrain to find a way home via nearest road. You can click to this <a href=https://www.youtube.com/watch?v=kFs2uIawgkk target="_blank">Video link</a> to learn more about this.
+            		</p>
+          	</div>
+
+          <h5 class="card-title">How To Use ?</h5>
+
+          <div>
+            <h6>1. How to use ?</h6>
+            <p>Drag and drop the location marker (Bubble shape) to simulate your movement. After you relesae the mouse, it will get smoothest shortest path from Tigergraph and render as a colored hexagons. Each hexagon is roughly 10 meters side length.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <h6>2. What Does Color Represent In Path ?</h6>
+            <p>Color Band Represent angle of elevation or slope of terrain from green as "lowest" to red as "highest".</p>
+          </div>
+
+          <div class="pt-2">
+            <h6>3. Street And Satellite Button ?</h6>
+            <p>By clicking Street and Satellite button you can change view of map to street and Satellite view respectively.</p>
+          </div>
+
+        </div>
+      </div>
+
+      
+    </div>
+  </aside> 
+  <!-- End Sidebar -->
+<div>
+  <main id="main" class="main">
+
+ 
+
+    <section class="section">
+      <div id="MSvideoContainer">
+        <div id="MSvideoContent">
+      
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card" style="background-color: transparent;">
+            <!--<div class="card-body"> -->
+            <div class="mapdiv">
+              <div id="map" class="map-container"></div>
+              <div class="calculation-box">
+                <div id="legend" class="legend">
+                  <div class="bar"></div>
+                  <div><small>Elevation</small> </div>
+                </div>
+                <div id=mapoverlay2 class="map-overlay2"></div>
+              </div>
+              <!-- <div class="buttonbox_grp btn-group ma-0" role="group" aria-label="Basic example"> -->
+                <button type="button" class="buttonbox_grp btn btn-light" id="streetbtn" onclick="streetFunction()">Street</button>
+                <button type="button" class="buttonbox_grp1 btn btn-primary" id="satellitebtn" onclick="stalliteFunction()">Satellite</button>
+              <!-- </div> -->
+              <button type="button" id="btngetpath" class="visually-hidden buttonbox btn btn-primary" disabled onclick="getpath()">
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...</button>
+              <button type="button" id="camera_btn" class="buttoncamera btn btn-primary"
+                onclick="location.href = 'cameraview.html';"><i class="bi bi-camera me-1"></i> Camera View</button>
+              <input type="button" style="display:none" id="myModal" data-toggle="modal" data-bs-toggle="modal"
+                data-bs-target="#fullscreenModal" />
+                <pre id="coordinates" class="coordinates"></pre>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+    </section>
+
+  </main><!-- End #main -->
+</div>
+  <!-- ======= Footer ======= -->
+  <!-- <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>ElectronBridge</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+
+    </div>
+  </footer> -->
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src=".env"></script>
+  <script src="assets/js/trailroad.js"></script>  
+</body>
+
+</html>

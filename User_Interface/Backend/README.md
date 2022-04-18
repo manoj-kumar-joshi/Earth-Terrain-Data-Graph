@@ -29,7 +29,7 @@ cd Earth-Terrain-Data-Graph/User_Interface/Backend
 npm install
 ```
 
-Step 3: Put your credentials in the .env file.
+Step 3: Put your credentials in the .env file *(Skip if graph is imported from same repo.).
 
 ```bash
 PORT=3000

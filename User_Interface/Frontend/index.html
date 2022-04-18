@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tigergraph Challenge</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
+  <style>
+    .map-container {
+      height: 600px;
+      /* position: absolute;*/
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .mapdiv {
+      position: relative;
+      margin: 1px;
+    }
+    .coordinates1 {
+      background: rgba(0, 0, 0, 0.6);
+      color: rgb(113, 234, 157);
+      position: absolute;
+      bottom: 50px;
+      left: 10px;
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+      border-radius: 3px;
+      display: none;
+      }
+    .calculation-box {
+
+      width: 22%;
+      position: absolute;
+      top: 13%;
+      left: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+    }
+    .container-box {
+
+      min-width: 22%;
+      position: absolute;
+      top: 9%;
+      left: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1px;
+      text-align: center;
+      
+    }
+    .map-overlay2 {
+
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      position: relative;
+      top: 10px;
+      bottom: 10px;
+      padding: 2px;
+      display: none;
+    }
+
+    .calculation-box .legend .bar {
+      height: 10px;
+      width: 100%;
+
+      /*background: linear-gradient(to right, #ebf5e7, #005c25);*/
+      background: linear-gradient(to right, #55f704, #8f0305);
+    }
+    .dropdown {
+
+      position: absolute;
+      top: 12.5%;
+      right: 10px;
+    }
+    .checkboxs{
+
+      position: absolute;
+      top: 10%;
+      left: 1.7%;
+      background: #fff;
+      width: 20%;
+    }
+    .buttonbox {
+
+      position: absolute;
+      /*top: 20%;
+      right: 10px;*/
+      top: 10px;
+      left: 40%;
+    }
+
+    .buttoncamera {
+      display: none;
+      position: absolute;
+      /*top: 28%;
+      right: 10px;*/
+      top: 10px;
+      left: 65%;
+    }
+
+    .button360camera {
+      display: none;
+      position: absolute;
+      /*top: 35%;
+      right: 10px;*/
+      top: 10px;
+      left: 52%;
+    }
+
+    .buttonbox_grp {
+      position: absolute;
+      top: 10px;
+      left: 1%;
+    }
+    .buttonbox_grp1 {
+      position: absolute;
+      top: 10px;
+      left: 10%;
+    }
+    p {
+      /*font-family: 'Open Sans';*/
+      margin: 0;
+      font-size: 13px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.2.2/mapbox-gl-draw.css"
+    type="text/css">
+  <script src="https://unpkg.com/h3-js"></script>
+</head>
+
+<body >
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">ElectronBridge</span>
+      </a>
+      <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+    </div><!-- End Logo -->
+
+    <!-- <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div> -->
+    <!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" style="margin-right: 20px;">
+            <i class="bi bi-github"></i>
+
+          </a><!-- End Messages Icon -->
+
+
+        </li><!-- End Messages Nav -->
+
+
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <!-- <ul class="sidebar-nav" id="sidebar-nav">
+
+
+
+      <li class="nav-item">
+        <a class="nav-link " data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Use Cases</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="index.html" class="active">
+              <i class="bi bi-circle"></i><span>Road To Pipeline layout</span>
+            </a>
+          </li>
+          <li>
+            <a href="trailroad.html">
+              <i class="bi bi-circle"></i><span>Discover Trail To Road</span>
+            </a>
+          </li>
+
+        </ul>
+      </li>
+
+    </ul> -->
+    <div class="col-lg-12">
+
+      <div class="card basic">
+        <div class="card-body">
+          <h5 class="card-title">How To Use ?</h5>
+
+          <div>
+            <h6>1. Road To Pipeline layout</h6>
+            <p>Select source and destination using the marker. After that click the "GetPath" button, it will get smoothest shortest path from Tigergraph and render as a colored hexagons. Each hexagon is roughly 10 meters side length.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <h6>2. What Does Color Represent In Path ?</h6>
+            <p>Color Band Represent angle of elevation or slope of terrain from green as "lowest" to red as "highest".</p>
+          </div>
+
+          <div class="pt-2">
+            <h6>3. Street And Satellite Button ?</h6>
+            <p>By clicking Street and Satellite button you can change view of map to street and Satellite view respectively.</p>
+          </div>
+
+        </div>
+      </div>
+
+      
+    </div>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <!-- <div class="pagetitle">
+      <h1>Alerts</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Components</li>
+          <li class="breadcrumb-item active">Alerts</li>
+        </ol>
+      </nav>
+    </div> -->
+    <!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <!--<div class="card-body"> -->
+            <div class="mapdiv">
+              <div id="map" class="map-container"></div>
+              <div class="container-box" >
+                <form >
+                  <label class="checkbox-inline" style="margin-right: 10px;">
+                    <input type="checkbox" id="res10" value="res10">Res10
+                  </label>
+                  <label class="checkbox-inline" style="margin-right: 10px;">
+                    <input type="checkbox" id="res11" value="res11" >Res11
+                  </label>
+                  <label class="checkbox-inline" style="margin-right: 10px;">
+                    <input type="checkbox" id="res12" checked value="res12" >Res12
+                  </label>
+                </form>
+              </div>
+              <div class="calculation-box">
+                <div id="legend" class="legend">
+                  <div id="bar" class="bar"></div>
+                  <div id="property_name">Elevation </div>
+                </div>
+                
+                <div id=mapoverlay2 class="map-overlay2"></div>
+              </div>
+              <!-- <div class="buttonbox_grp btn-group" role="group" aria-label="Basic example"> -->
+                <button type="button" class="buttonbox_grp btn btn-light" style="opacity: 0.9;" id="streetbtn" onclick="streetFunction()">Street</button>
+                <button type="button" class="buttonbox_grp1 btn btn-primary"  style="opacity: 0.9;" id="satellitebtn" onclick="stalliteFunction()">Satellite</button>
+             
+              <!-- </div> -->
+              <div class="dropdown row mb-1">
+               
+                <div class="col-sm-12">
+                  <select class="form-select" style="background-color: rgba(255, 255, 255, 0.8);" id="ddlViewBy" onchange="getproperty(this);" aria-label="Default select Property">
+                    <option selected value="elevation_angle">Elevation</option>
+                    <option value="ndvi">Ndvi</option>
+                    <option value="smoothness_percent">Smoothness</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- <div class="checkboxs  row mb-1">
+                <div class="container">
+                  <form >
+                    <label class="checkbox-inline" style="margin-right: 10px;">
+                      <input type="checkbox" id="res10" value="res10">Res10
+                    </label>
+                    <label class="checkbox-inline" style="margin-right: 10px;">
+                      <input type="checkbox" id="res11" value="res11" >Res11
+                    </label>
+                    <label class="checkbox-inline" style="margin-right: 10px;">
+                      <input type="checkbox" id="res12" checked value="res12" >Res12
+                    </label>
+                  </form>
+                </div>
+              </div> -->
+
+
+              <button type="button" id="btngetpath"  style="opacity: 0.9;" class="buttonbox btn btn-primary" onclick="getpath()">
+                <span class="visually-hidden spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Get Path</button>
+              <button type="button" style="display:none;" id="camera_btn" class="buttoncamera btn btn-primary"
+                onclick="window.open('camera_view.html');"><i class="bi bi-camera me-1"></i> Camera View</button>
+              <button type="button" id="360_btn" class="button360camera btn btn-primary" style="opacity: 0.9;"
+                onclick="window.open('cameraview.html');"><i class="bi bi-eye me-1"></i> 360 View</button>
+              <input type="button" style="display:none" id="myModal" data-toggle="modal" data-bs-toggle="modal"
+                data-bs-target="#fullscreenModal" />
+                <pre id="coordinates1" class="coordinates1"></pre>
+            </div>
+
+
+            <!-- </div>-->
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>ElectronBridge</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src=".env"></script>
+  <script src="assets/js/index.js"></script>
+
+</html>
