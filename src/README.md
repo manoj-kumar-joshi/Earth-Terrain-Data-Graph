@@ -55,11 +55,11 @@ LIBINCLUDE += -Igsdk/include/thirdparty/h3
 LDFLAGS += -lh3
 ```
 
-Step 7: Backup ExprFunction.hpp file and copy new ExprFunction.hpp file.
+Step 7: Backup ExprFunction.hpp file and copy new ExprFunction.hpp file from exported data.
 ```bash
 #add these lines  in "home/tigergraph/tigergraph/app/3.5.0/dev/gdk/MakeUdf"
 cp /home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hpp /home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hppold
-cp  /home/tigergraph/mydata/ExprFunctions.hpp /home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hpp
+cp /home/tigergraph/mydata/ExprFunctions.hpp /home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hpp
 ```
 Step 8: login as tigergraph user and Store the updated query UDF file
 ```bash
@@ -67,7 +67,7 @@ su tigergraph
 gsql
 GSQL > PUT ExprFunctions FROM "/home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hpp"
 ```
-Step 9: Restart gadmin and import and install the data.
+Step 9: Restart gadmin and import and install the exported data.
 ```bash
 gadmin restart all
 gsql
