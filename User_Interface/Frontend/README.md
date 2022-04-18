@@ -1,7 +1,7 @@
 
 ## Demo User Interface of Showing TigerGraph with GeoSpatial Data.
 
-This demo uses API build using [TigerGraph RESTAPP](https://docs.tigergraph.com/tigergraph-server/current/api/authentication) with geospatial data and [mapbox-gl-js](https://docs.mapbox.com/mapbox-gl-js/guides/) and BootStrap html to render Mapbox maps with different layers on top using the geospatial data from [demo tigergraph backand API's](https://github.com/ashokbarthwaleb/tigergraph_api).
+This demo uses API build using [TigerGraph RESTAPP](https://docs.tigergraph.com/tigergraph-server/current/api/authentication) with geospatial data and [mapbox-gl-js](https://docs.mapbox.com/mapbox-gl-js/guides/) and BootStrap html to render Mapbox maps with different layers on top using the geospatial data from [demo tigergraph backand API's](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/User_Interface/Backend).
 
 
 ### Demo
@@ -9,9 +9,9 @@ This demo uses API build using [TigerGraph RESTAPP](https://docs.tigergraph.com/
 **Preview on [demo.electronbridge.com](https://demo.electronbridge.com/os/TigerGraphEB/)**
 
 1. Discover trail to nearest road in hilly area.
-<br><img src="https://github.com/ashokbarthwaleb/frontend/blob/main/assets/screenshots/Screenshot3.png" width=300>
-<br><img src="https://github.com/ashokbarthwaleb/frontend/blob/main/assets/screenshots/Screenshot4.png" width=300>
-2. Road or Pipeline layout path planning.<br><img src="https://github.com/ashokbarthwaleb/frontend/blob/main/assets/screenshots/Screenshot1.png" width=300>
+<br><img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot1.png" width=300>
+<img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot2.png" width=300>
+2. Road or Pipeline layout path planning.<br><img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot3.png" width=500>
 
 #### To start setting up the project
 
@@ -27,7 +27,7 @@ Step 2: cd into the cloned repo and run:
 copy forntend folder in any webserver i.e Nginx , Apache
 ```
 
-Step 3: Put your credentials in the .env file.
+Step 3: Put your credentials in the .env file(Skip this step you wan to use provided credentials).
 
 ```bash
 accessToken=MAPBOX ACCESS TOKEN.
