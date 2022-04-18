@@ -16,10 +16,9 @@ Step 1: Clone the repo
 git clone https://github.com/ElectronBridge/Earth-Terrain-Data-Graph.git
 ```
 
-Step 2: cd into the cloned repo and copy src folder to Shared Folder which is shared with Docker Container:
+Step 2: Copy src folder to Shared Folder which is shared with Docker Container:
 
 ```bash
-cd Earth-Terrain-Data-Graph/
 cp -R Earth-Terrain-Data-Graph/src/* /<sharedfolder>
 ```
 
@@ -68,7 +67,7 @@ su tigergraph
 gsql
 GSQL > PUT ExprFunctions FROM "/home/tigergraph/tigergraph/app/3.5.0/dev/gdk/gsql/src/QueryUdf/ExprFunctions.hpp"
 ```
-Step 8: Restart gadmin and import and install the data.
+Step 9: Restart gadmin and import and install the data.
 ```bash
 gadmin restart all
 gsql
