@@ -66,7 +66,7 @@ Other additions:
 
 In the project we have three differnt sub-modules each is mention in hierarchy plese install sub modules as per below hierarchy.
 
-- Data preparation (this you can skip as tigergraph import file is already exported with data).
+- Data preparation (**You can skip as tigergraph import file is already exported with data**).
   - [Steps For Data Preparation](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation)
 - Tigergraph schema and UDF function installations.
   - [Steps To Import Tigergraph and Install UDF Functions](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/src)

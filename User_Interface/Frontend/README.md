@@ -33,7 +33,7 @@ Step 3: Put your credentials in the .env file. (**Skip this step you wan to use 
 accessToken=MAPBOX ACCESS TOKEN.
 RestAppURL=URL of API runnnig ex: "http://127.0.0.1:3000/api/v1/" .
 ```
-[GET Demo tigergraph backand API's](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/User_Interface/Backend)
+[Backand API's](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/User_Interface/Backend)
 
 Step 4: Browse the APP by
 
