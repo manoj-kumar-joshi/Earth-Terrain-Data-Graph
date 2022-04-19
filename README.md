@@ -58,7 +58,7 @@ Tell us how your entry was the most...
 - Applicable graph solution 
     - With the availability of satellite images via APIs ([ref](https://www.sentinel-hub.com/develop/api/) it is easy to launch this system to deliver path traversal based out of latest available data.
 
-    -Apart from search and rescue organizations and volunteers our solution will also be very useful in "Road planning", "Natural Gas and water pipelines" For reference plz visit following links ..
+    - Apart from search and rescue organizations and volunteers our solution will also be very useful in "Road planning", "Natural Gas and water pipelines" For reference plz visit following links ..
         - https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=8173&context=etd_theses
         - https://www.researchgate.net/publication/263058158_GIS-Based_Route_Planning_in_Landslide-Prone_Areas
         - https://proceedings.esri.com/library/userconf/proc10/uc/papers/pap_1392.pdf
