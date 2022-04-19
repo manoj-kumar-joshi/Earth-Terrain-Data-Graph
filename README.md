@@ -1,11 +1,10 @@
-
 # Earth Terrain Data Graph
 
 #### Contributers and Contact Information: 
 
 - Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
 - Ashok Barthwal (Email:- ashok.barthwal@electronbridge.com)
-- yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
+- Yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
 
 #### Problem Statement : Empower Rescue team and Volunteers with Earth Observation Data
 
@@ -29,7 +28,7 @@ Earth observation data is crucial in natural/disaster response and other acciden
 
 #### Description: 
 
-Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combing Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
+Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combining Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
 
 - We created UDF functions with the help of C bindings of uber H3. This allow us to call geo-spatial functions while traversing TigerGraph.
 - We then did some pre-processing for our sample of satellite data. Which is elevation and multi spectral images gathered from USGS and Sentinel 2. In this pre-processing we aggregated Earth observation attributes at resolution 10,11 and 12 respectively and populated graph with it.
@@ -50,6 +49,7 @@ Other additions:
  - **Data**: The [Rasters images](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2 https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
  - **Technology Stack**: 
     - In data preparation we have used **python** as programming language. 
+    - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
     - In Backend API we have used **Node.js** as programming language. 
     - In User Interface we have used **HTML5, jquery** as programming language. 
  - **Video**: Feel free to include other images or videos to better demonstrate your work.
