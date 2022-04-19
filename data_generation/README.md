@@ -1,7 +1,7 @@
 ## Jupyter Notebooks used to generate data
 
-This repository contains jupyter notebooks related to single use case in separate directory. Each Notebook creates some csv files which will be pushed to tigergraph using separate project. 
-  1. [dem_UC2](https://github.com/yogeshEB/tg_clg_data_generate_eb/tree/main/dem_UC2): The input file for this use case is a raster image with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
+This directory contains jupyter notebooks related to single use case in separate directory. Each Notebook creates some csv files which will be pushed to tigergraph using separate script. 
+  1. [use_case1](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation/use_case1): The input file for this use case is a raster image with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
 
 
 ### Requirement for python notebooks to run
@@ -37,7 +37,7 @@ we recommend to create a conda/miniconda environment for setting the below envir
   * CPU - 16 core
 
 ### Steps to prepare environment for running the notebooks
-  * Step 1: run [prepare_system.ipynb](https://github.com/yogeshEB/tg_clg_data_generate_eb/blob/prepare_system.ipynb) for preparing directory structure and downloading the required raster/csv files(can not attach those files here as size is big)
-  * Step 2: run [use_case1/santa_rosa_roads.ipynb](https://github.com/yogeshEB/tg_clg_data_generate_eb/blob/use_case1/santa_rosa_roads.ipynb). This will create 3 csvs in Data/final_csv
-  * Step 3: run [use_case1/create_ndvi.ipynb](https://github.com/yogeshEB/tg_clg_data_generate_eb/blob/use_case1/create_ndvi.ipynb). This will create 3 csvs in Data/final_csv
-  * Step 4: run [use_case1/create_graph_data.ipynb](https://github.com/yogeshEB/tg_clg_data_generate_eb/blob/use_case1/create_graph_data.ipynb). This will create 6 csvs in Data/final_csv
+  * Step 1: run [prepare_system.ipynb](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/data_generation/prepare_system.ipynb) for preparing directory structure and downloading the required raster/csv files(can not attach those files here as size is big)
+  * Step 2: run [use_case1/santa_rosa_roads.ipynb](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/data_generation/use_case1/santa_rosa_roads.ipynb). This will create 3 csvs in Data/final_csv
+  * Step 3: run [use_case1/create_ndvi.ipynb](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/data_generation/use_case1/create_ndvi.ipynb). This will create 3 csvs in Data/final_csv
+  * Step 4: run [use_case1/create_graph_data.ipynb](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/data_generation/use_case1/create_graph_data.ipynb). This will create 6 csvs in Data/final_csv

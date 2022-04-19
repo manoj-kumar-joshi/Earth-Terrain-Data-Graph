@@ -40,7 +40,7 @@ Step 3. add lib and header in tigergraph compiler path
   LDFLAGS += -lh3
   ```
   
-Step 4. Add udf functions from files [ExprFunction.hpp](https://github.com/yogeshEB/tg_clg_h3_tigergraph/blob/main/ExprFunction.hpp) to your tigergraph installation as per instructions in this link https://docs.tigergraph.com/gsql-ref/current/querying/func/query-user-defined-functions#_define_a_query_udf
+Step 4. Add udf functions from files [ExprFunction.hpp](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/h3_to_tigergraph/ExprFunction.hpp) to your tigergraph installation as per instructions in this link https://docs.tigergraph.com/gsql-ref/current/querying/func/query-user-defined-functions#_define_a_query_udf
 
 
 
