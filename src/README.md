@@ -8,7 +8,7 @@ To import an exported database, ensure that the export files are from a database
 Make sure you have installed all of the following prerequisites on your development machine:
 * TigerGraph - [Download & Install TigerGraph](https://docs.tigergraph.com/tigergraph-server/current/getting-started/docker). Docker Instalation version 3.5.0
 
-#### To start setting up the project
+#### To start setting up the project and include h3 library in tigergraph system
 
 Step 1: Clone the repo
 
@@ -74,6 +74,24 @@ gsql
 GSQL > IMPORT GRAPH ALL FROM "/home/tigergraph/mydata/exportgraphs/"
 GSQL > INSTALL QUERY ALL 
 ```
+
+# Details
+
+## H3(Hexagonal hierarchical geospatial indexing system) Functions port to Tigergraph
+
+In an attempt to bring geo-spatial features to Tigergraph, we created [UDF functions](https://docs.tigergraph.com/gsql-ref/current/ddl-and-loading/add-token-function) for some of the functions from [Uber H3](https://github.com/uber/h3) Library.
+
+
+### H3 Overview
+H3 is a geospatial indexing system that partitions the world into hexagonal cells. H3 is open source under the Apache 2 license. The H3 Core Library implements the H3 grid system. It includes functions for converting from latitude and longitude coordinates to the containing H3 cell, finding the center of H3 cells, finding the boundary geometry of H3 cells, finding neighbors of H3 cells, and more. For info please visit https://h3geo.org/docs.
+
+
+#### Highlights:
+- H3 offers an easy API for indexing coordinates into a hexagonal grid, down to square meter resolution.
+
+- Indexed data can be quickly joined across disparate datasets and aggregated at different levels of precision.
+
+- H3 enables a range of algorithms and optimizations based
 
 ## License
 
