@@ -27,7 +27,7 @@ Step 2: cd into the cloned repo and run:
 copy forntend folder in any webserver i.e Nginx , Apache
 ```
 
-Step 3: Put your credentials in the .env file(Skip this step you wan to use provided credentials).
+Step 3: Put your credentials in the .env file. (**Skip this step you wan to use provided credentials**)
 
 ```bash
 accessToken=MAPBOX ACCESS TOKEN.
