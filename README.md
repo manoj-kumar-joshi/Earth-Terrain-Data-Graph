@@ -5,7 +5,7 @@
 
 - Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
 - Ashok Barthwal (Email:- ashok.barthwal@electronbridge.com)
-- yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
+- Yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
 
 #### Problem Statement : Empower Rescue team and Volunteers with Earth Observation Data
 
