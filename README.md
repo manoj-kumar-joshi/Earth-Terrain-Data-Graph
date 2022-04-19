@@ -48,9 +48,15 @@ Tell us how your entry was the most...
 Other additions: 
 
  - **Data**: Give context for the dataset used and give full access to judges if publicly available or metadata otherwise. 
- - **Technology Stack**: Describe technologies and programming languages used. 
- - **Visuals**: Feel free to include other images or videos to better demonstrate your work.
- - Link websites or applications if needed to demonstrate your work. 
+ - **Technology Stack**: 
+    - In data preparation we have used **python** as programming language. 
+    - In UDF Functions we used  **python library h3** as programming language. 
+    - In Backend API we have used **Node.js** as programming language. 
+    - In User Interface we have used **HTML5 jquery** as programming language. 
+ - **Video**: Feel free to include other images or videos to better demonstrate your work.
+ - **Preview on**
+    - [Discover trail to nearest road in hilly area](https://demo.electronbridge.com/os/TigerGraphEB/)
+    - [Road or Pipeline layout path planning](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)
 
 ## Dependencies
 
