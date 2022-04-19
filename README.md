@@ -81,10 +81,10 @@ We also plan to integrate more features to the applications and graph and work w
 - Build regular pipeline from Satellite data to TigerGraph 
   - Integrate data pipeline directly with open data cubes like “DIGITAL EARTH AFRICA” and “DIGITAL EARTH AUSTRALIA” to have a near real time update of Earth observation data into tigergraph.
 - Expand applications for Rescue teams and Volunteers
- - Develop more algorithms and include attributes like “FLOOD Data”, “ELECTRICITY STATUS” and provide more real time series information.
+  - Develop more algorithms and include attributes like “FLOOD Data”, “ELECTRICITY STATUS” and provide more real time series information.
 Develop Mobile applications which can interact with Tigergraph along with other 
 - Collaborate with organizations like disastercharter.org
- - Collaborate with various organizations who are helping co-ordinated Search and rescue and facilitate them with our solution.
+  - Collaborate with various organizations who are helping co-ordinated Search and rescue and facilitate them with our solution.
 
 
 
