@@ -40,7 +40,7 @@ Earth observation/geography data is available from Satellite and OpenStreetMap (
 Tell us how your entry was the most...					
 
 -  Impactfulness:
-    - Natural disasters all around the world in the year 2008 to 2020 caused around 10 Millions injured and around 40 Millions displaced. For details [click here](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL) Global and local search and rescue missions are launched every year around the world for stranded people as a result of natural disasters or otherwise. In the USA alone between 1992 and 2007 a total of 65,439 "Search and Rescue" (SAR) missions were conducted in National Parks. For reference [click here] ( https://www.researchgate.net/figure/Total-search-and-rescue-SAR-costs-incidents-fatalities-illness-or-injured_tbl1_26795932.)
+    - Natural disasters all around the world in the year 2008 to 2020 caused around 10 Millions injured and around 40 Millions displaced. For details [click here](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL) Global and local search and rescue missions are launched every year around the world for stranded people as a result of natural disasters or otherwise. In the USA alone between 1992 and 2007 a total of 65,439 "Search and Rescue" (SAR) missions were conducted in National Parks. For reference [See]( https://www.researchgate.net/figure/Total-search-and-rescue-SAR-costs-incidents-fatalities-illness-or-injured_tbl1_26795932.)
 - Innovativeness:
     - Existing technologies mostly utilize Digital Elevation and other earth observation data to create maps and info graphs [ref](https://www.esri.com/news/arcuser/0799/demdemo.html). Because of the challenges of processing huge amount of data and lack of faster relations based search prevent other technologies to create land traversal solutions using earth observation data.
 
@@ -133,4 +133,11 @@ Review the steps you took to create this project and the resources you were prov
 
 ## References
 
-Please give credit to other projects, videos, talks, people, and other sources that have inspired and influenced your project. 
+- [ourworldindata.org](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL)
+- [esri DEM-Based Terrain Modeling](https://www.esri.com/news/arcuser/0799/demdemo.html)
+- [Search and Rescue in US National Parks](https://www.researchgate.net/figure/Total-search-and-rescue-SAR-costs-incidents-fatalities-illness-or-injured_tbl1_26795932)
+- [satellite images via APIs](https://www.sentinel-hub.com/develop/api/)
+- [scholarworks.sjsu.edu](https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=8173&context=etd_theses)
+- [researchgate](https://www.researchgate.net/publication/263058158_GIS-Based_Route_Planning_in_Landslide-Prone_Areas)
+- [proceedings.esri.com](https://proceedings.esri.com/library/userconf/proc10/uc/papers/pap_1392.pdf)
+ 
