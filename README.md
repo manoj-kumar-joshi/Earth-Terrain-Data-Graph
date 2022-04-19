@@ -64,7 +64,10 @@ Other additions:
 
 ## Installation
 
-Please give detailed instructions on installing, configuring, and running the project so judges can fully replicate and assess it. 
+In the project we have three differnt module project
+- Data preparation(this you can skip as tigergraph import file is already exported with data).
+- Tigergraph schema and UDF function installations.
+- User interface and API's to intrect with UI.
 
 This can include:
 1. Clone repository
