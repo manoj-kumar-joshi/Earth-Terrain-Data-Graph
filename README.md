@@ -58,7 +58,7 @@ Other additions:
   * [Tigergraph](https://docs.tigergraph.com/tigergraph-server/current/getting-started/docker)(version : 3.5.0)
   * [Python In Docker Container](https://docs.docker.com/engine/install/) (version > 3.0)
   * [Node.js and npm package manager](https://nodejs.org/en/download/)   
-  * [Webserver] [apache](https://httpd.apache.org/docs/2.4/install.html) or [nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)  
+  * [apache](https://httpd.apache.org/docs/2.4/install.html) or [nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)  
   
 
 
@@ -74,7 +74,19 @@ This can include:
 
 ## Known Issues and Future Improvements
 
-Explain known liminations within the project and potential next steps. 
+Since our objective is to empower volunteers at the time of crisis, we want to take this prototype to a minimum viable product level and explore its practical usage with various organizations.
+We also plan to integrate more features to the applications and graph and work with Open data Cube project to gather near real time satellite imagery and other kind of data.
+
+##### Future Vision 
+- Build regular pipeline from Satellite data to TigerGraph 
+  - Integrate data pipeline directly with open data cubes like “DIGITAL EARTH AFRICA” and “DIGITAL EARTH AUSTRALIA” to have a near real time update of Earth observation data into tigergraph.
+- Expand applications for Rescue teams and Volunteers
+ - Develop more algorithms and include attributes like “FLOOD Data”, “ELECTRICITY STATUS” and provide more real time series information.
+Develop Mobile applications which can interact with Tigergraph along with other 
+- Collaborate with organizations like disastercharter.org
+ - Collaborate with various organizations who are helping co-ordinated Search and rescue and facilitate them with our solution.
+
+
 
 ## Reflections
 
