@@ -47,6 +47,7 @@
       position: relative;
       margin: 1px;
     }
+
     .coordinates1 {
       background: rgba(0, 0, 0, 0.6);
       color: rgb(113, 234, 157);
@@ -59,7 +60,8 @@
       line-height: 18px;
       border-radius: 3px;
       display: none;
-      }
+    }
+
     .calculation-box {
 
       width: 22%;
@@ -72,6 +74,7 @@
       padding: 15px;
       text-align: center;
     }
+
     .container-box {
 
       min-width: 22%;
@@ -81,8 +84,9 @@
       background-color: rgba(255, 255, 255, 0.8);
       padding: 1px;
       text-align: center;
-      
+
     }
+
     .map-overlay2 {
 
       font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -103,13 +107,15 @@
       /*background: linear-gradient(to right, #ebf5e7, #005c25);*/
       background: linear-gradient(to right, #55f704, #8f0305);
     }
+
     .dropdown {
 
       position: absolute;
       top: 12.5%;
       right: 10px;
     }
-    .checkboxs{
+
+    .checkboxs {
 
       position: absolute;
       top: 10%;
@@ -117,6 +123,7 @@
       background: #fff;
       width: 20%;
     }
+
     .buttonbox {
 
       position: absolute;
@@ -149,11 +156,13 @@
       top: 10px;
       left: 1%;
     }
+
     .buttonbox_grp1 {
       position: absolute;
       top: 10px;
       left: 10%;
     }
+
     p {
       /*font-family: 'Open Sans';*/
       margin: 0;
@@ -168,7 +177,7 @@
   <script src="https://unpkg.com/h3-js"></script>
 </head>
 
-<body >
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -196,7 +205,8 @@
 
         <li class="nav-item dropdown">
 
-          <a class="nav-link nav-icon" href="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph" style="margin-right: 20px;">
+          <a class="nav-link nav-icon" href="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph"
+            style="margin-right: 20px;">
             <i class="bi bi-github"></i>
 
           </a><!-- End Messages Icon -->
@@ -242,28 +252,38 @@
 
       <div class="card basic">
         <div class="card-body">
+          <h5 class="card-title">Overview</h5>
+
+          This is a simple application using TG query "tg_multi_step_search". This query searches for the smoothest
+          shortest path between the source and destination selected. Application using this query may be useful to
+          anyone in the mountain or uncharted terrain to find a road to pipeline layout. You can click to this <a
+            href="https://youtu.be/U5CQGo82_Z8" target="_blank">Video link</a> to learn more about this.
           <h5 class="card-title">How To Use ?</h5>
 
           <div>
-            <h6>1. Road To Pipeline layout</h6>
-            <p>Select source and destination using the marker. After that click the "GetPath" button, it will get smoothest shortest path from Tigergraph and render as a colored hexagons. Each hexagon is roughly 10 meters side length.
+            <h6>1. How to use ?</h6>
+            <p>Select source and destination using the marker. After that click the "GetPath" button, it will get
+              smoothest shortest path from Tigergraph and render as a colored hexagons. Each hexagon is roughly 10
+              meters side length.
             </p>
           </div>
 
           <div class="pt-2">
             <h6>2. What Does Color Represent In Path ?</h6>
-            <p>Color Band Represent angle of elevation or slope of terrain from green as "lowest" to red as "highest".</p>
+            <p>Color Band Represent angle of elevation or slope of terrain from green as "lowest" to red as "highest".
+            </p>
           </div>
 
           <div class="pt-2">
             <h6>3. Street And Satellite Button ?</h6>
-            <p>By clicking Street and Satellite button you can change view of map to street and Satellite view respectively.</p>
+            <p>By clicking Street and Satellite button you can change view of map to street and Satellite view
+              respectively.</p>
           </div>
 
         </div>
       </div>
 
-      
+
     </div>
   </aside><!-- End Sidebar-->
 
@@ -289,16 +309,16 @@
             <!--<div class="card-body"> -->
             <div class="mapdiv">
               <div id="map" class="map-container"></div>
-              <div class="container-box" >
-                <form >
+              <div class="container-box">
+                <form>
                   <label class="checkbox-inline" style="margin-right: 10px;">
                     <input type="checkbox" id="res10" value="res10">Res10
                   </label>
                   <label class="checkbox-inline" style="margin-right: 10px;">
-                    <input type="checkbox" id="res11" value="res11" >Res11
+                    <input type="checkbox" id="res11" value="res11">Res11
                   </label>
                   <label class="checkbox-inline" style="margin-right: 10px;">
-                    <input type="checkbox" id="res12" checked value="res12" >Res12
+                    <input type="checkbox" id="res12" checked value="res12">Res12
                   </label>
                 </form>
               </div>
@@ -307,18 +327,21 @@
                   <div id="bar" class="bar"></div>
                   <div id="property_name">Elevation </div>
                 </div>
-                
+
                 <div id=mapoverlay2 class="map-overlay2"></div>
               </div>
               <!-- <div class="buttonbox_grp btn-group" role="group" aria-label="Basic example"> -->
-                <button type="button" class="buttonbox_grp btn btn-light" style="opacity: 0.9;" id="streetbtn" onclick="streetFunction()">Street</button>
-                <button type="button" class="buttonbox_grp1 btn btn-primary"  style="opacity: 0.9;" id="satellitebtn" onclick="stalliteFunction()">Satellite</button>
-             
+              <button type="button" class="buttonbox_grp btn btn-light" style="opacity: 0.9;" id="streetbtn"
+                onclick="streetFunction()">Street</button>
+              <button type="button" class="buttonbox_grp1 btn btn-primary" style="opacity: 0.9;" id="satellitebtn"
+                onclick="stalliteFunction()">Satellite</button>
+
               <!-- </div> -->
               <div class="dropdown row mb-1">
-               
+
                 <div class="col-sm-12">
-                  <select class="form-select" style="background-color: rgba(255, 255, 255, 0.8);" id="ddlViewBy" onchange="getproperty(this);" aria-label="Default select Property">
+                  <select class="form-select" style="background-color: rgba(255, 255, 255, 0.8);" id="ddlViewBy"
+                    onchange="getproperty(this);" aria-label="Default select Property">
                     <option selected value="elevation_angle">Elevation</option>
                     <option value="ndvi">Ndvi</option>
                     <option value="smoothness_percent">Smoothness</option>
@@ -343,7 +366,8 @@
               </div> -->
 
 
-              <button type="button" id="btngetpath"  style="opacity: 0.9;" class="buttonbox btn btn-primary" onclick="getpath()">
+              <button type="button" id="btngetpath" style="opacity: 0.9;" class="buttonbox btn btn-primary"
+                onclick="getpath()">
                 <span class="visually-hidden spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                 Get Path</button>
               <button type="button" style="display:none;" id="camera_btn" class="buttoncamera btn btn-primary"
@@ -352,7 +376,7 @@
                 onclick="window.open('cameraview.html');"><i class="bi bi-eye me-1"></i> 360 View</button>
               <input type="button" style="display:none" id="myModal" data-toggle="modal" data-bs-toggle="modal"
                 data-bs-target="#fullscreenModal" />
-                <pre id="coordinates1" class="coordinates1"></pre>
+              <pre id="coordinates1" class="coordinates1"></pre>
             </div>
 
 
