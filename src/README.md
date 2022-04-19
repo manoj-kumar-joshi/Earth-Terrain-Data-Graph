@@ -76,7 +76,7 @@ GSQL > INSTALL QUERY ALL
 ```
 
 # H3 Representation of Geography with our tigergraph scema.
-<img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot4.png" width="350px" height="350px"/>
+<img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot4.png" width="400px" height="300px"/>
 
 # Details
 
