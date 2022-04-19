@@ -1,5 +1,4 @@
-
-# Earth-Terrain-Data-Graph
+# Earth Terrain Data Graph
 
 #### Contributers and Contact Information: 
 
@@ -47,12 +46,12 @@ Tell us how your entry was the most...
 
 Other additions: 
 
- - **Data**: Give context for the dataset used and give full access to judges if publicly available or metadata otherwise. 
+ - **Data**: The Rasters images ([image1](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2) [image2](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2)) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
  - **Technology Stack**: 
     - In data preparation we have used **python** as programming language. 
     - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
     - In Backend API we have used **Node.js** as programming language. 
-    - In User Interface we have used **HTML5 jquery** as programming language. 
+    - In User Interface we have used **HTML5, jquery** as programming language. 
  - **Video**: Feel free to include other images or videos to better demonstrate your work.
  - **Preview on**
     - [Discover trail to nearest road in hilly area](https://demo.electronbridge.com/os/TigerGraphEB/)
@@ -82,9 +81,9 @@ In the project we have three differnt sub-modules.Install sub modules as per bel
 
 
 
-## Limitations Future Improvements
+## Limitations And Future Improvements
 
-For demo purpose we have use data of Santa Rosa Island of California.
+For demo purpose we have only processed and implemented data of Santa Rosa Island of California.
 
 Since our objective is to empower volunteers at the time of crisis, we want to take this prototype to a minimum viable product level and explore its practical usage with various organizations.
 We also plan to integrate more features to the applications and graph and work with Open data Cube project to gather near real time satellite imagery and other kind of data.
