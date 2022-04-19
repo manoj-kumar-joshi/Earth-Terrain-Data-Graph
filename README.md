@@ -78,7 +78,7 @@ In the project we have three differnt sub-modules.Install sub modules as per bel
 
 ## Limitations Future Improvements
 
-For demo purpose we have use limited data of Santa Rosa Island of California.
+For demo purpose we have use data of Santa Rosa Island of California.
 
 Since our objective is to empower volunteers at the time of crisis, we want to take this prototype to a minimum viable product level and explore its practical usage with various organizations.
 We also plan to integrate more features to the applications and graph and work with Open data Cube project to gather near real time satellite imagery and other kind of data.
