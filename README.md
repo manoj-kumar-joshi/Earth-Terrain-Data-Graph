@@ -2,11 +2,13 @@
 # Earth-Terrain-Data-Graph
 
 #### Contributers and Contact Information: 
+
 - Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
 - Ashok Barthwal (Email:- ashok.barthwal@electronbridge.com)
 - yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
 
-**Problem Statement : [Empower Rescue team and Volunteers with Earth Observation Data ]**
+#### Problem Statement : Empower Rescue team and Volunteers with Earth Observation Data
+
 Earth observation data is crucial in natural/disaster response and other accidental stranded people cases in national parks and mountains. In case of a natural disaster large number of resources are needed to provide timely help to the victims. A co-ordinated effort between global or local disaster response team and volunteers makes a key difference. Latest observation data from satellites plays a key role. Although many Search and Rescue organizations are already utilizing satellite data in different ways (Mostly GIS), we think we can take this to next level. With availability of scalable graph like TigerGraph, it is possible to store earth observation data in terms of Vertices and Relationships which leads to faster availability of insights out of this data specially terrain traversal applications for rescue teams and volunteers.
 
 ##### The Problem
@@ -25,7 +27,7 @@ Earth observation data is crucial in natural/disaster response and other acciden
 - Equip TigerGraph with required UDF to process geo-spatial data.
 - Create query interfaces to this data to generate insights like terrain traversal applications.
 
-**Description**: 
+#### Description: 
 
 Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combing Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
 
