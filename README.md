@@ -58,8 +58,11 @@ Other additions:
     - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
     - In Backend API we have used **Node.js** as programming language. 
     - In User Interface we have used **HTML5, jquery** as programming language. 
- - **Video**: Feel free to include other images or videos to better demonstrate your work.
- - **Demo preview on**
+ - **Video**: 
+    - [Earth Observation and Graph Showcase Video](https://youtu.be/N9Qq0ecgGAE)
+    - [Find Path Using Terrain Elevation And Smoothness Video](https://youtu.be/U5CQGo82_Z8)
+    - [Find Path To Nearest Road Using TigerGraph Video](https://youtu.be/RmwQuWnqX9A)
+ - **Demo**
     - [Discover trail to nearest road in hilly area](https://demo.electronbridge.com/os/TigerGraphEB/)
     - [Road or Pipeline layout path planning](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)
 
