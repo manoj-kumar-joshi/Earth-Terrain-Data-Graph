@@ -75,7 +75,7 @@ Other additions:
 
 ## Installation
 
-In the project we have three differnt sub-modules.Install sub modules as per below hierarchy only.
+In the project we have three differnt sub-modules. Install sub modules as per below hierarchy only.
 
 - Data preparation (**You can skip as in tigergraph import zip file is already exported with data**).
   - [Steps For Data Preparation](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation)
