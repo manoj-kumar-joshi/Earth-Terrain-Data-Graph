@@ -29,7 +29,7 @@ Earth observation data is crucial in natural/disaster response and other acciden
 
 #### Description: 
 
-Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combing Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
+Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combining Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
 
 - We created UDF functions with the help of C bindings of uber H3. This allow us to call geo-spatial functions while traversing TigerGraph.
 - We then did some pre-processing for our sample of satellite data. Which is elevation and multi spectral images gathered from USGS and Sentinel 2. In this pre-processing we aggregated Earth observation attributes at resolution 10,11 and 12 respectively and populated graph with it.
@@ -50,7 +50,7 @@ Other additions:
  - **Data**: Give context for the dataset used and give full access to judges if publicly available or metadata otherwise. 
  - **Technology Stack**: 
     - In data preparation we have used **python** as programming language. 
-    - In UDF Functions we used  **python library h3** as programming language. 
+    - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
     - In Backend API we have used **Node.js** as programming language. 
     - In User Interface we have used **HTML5 jquery** as programming language. 
  - **Video**: Feel free to include other images or videos to better demonstrate your work.
