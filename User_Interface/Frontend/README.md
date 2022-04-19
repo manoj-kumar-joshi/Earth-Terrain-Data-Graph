@@ -8,10 +8,10 @@ This demo uses API build using [TigerGraph RESTAPP](https://docs.tigergraph.com/
 
 **Preview on [demo.electronbridge.com](https://demo.electronbridge.com/os/TigerGraphEB/)**
 
-1. Discover trail to nearest road in hilly area.[Demo](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)<br>
+1. Discover trail to nearest road in hilly area. [Demo](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)<br>
 <img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot1.png" width="180px" height="250px"/>
 <img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot2.png" width="180px" height="250px"/>
-2. Road or Pipeline layout path planning.[Demo](https://demo.electronbridge.com/os/TigerGraphEB/)<br><img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot3.png" width="450px">
+2. Road or Pipeline layout path planning. [Demo Link](https://demo.electronbridge.com/os/TigerGraphEB/index.html) <br> <img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot3.png" width="450px">
 
 #### To start setting up the project
 
