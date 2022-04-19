@@ -75,6 +75,9 @@ GSQL > IMPORT GRAPH ALL FROM "/home/tigergraph/mydata/exportgraphs/"
 GSQL > INSTALL QUERY ALL 
 ```
 
+# H3 Representation of Geography with our tigergraph scema.
+<img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot4.png" width="250"/>
+
 # Details
 
 ## H3(Hexagonal hierarchical geospatial indexing system) Functions port to Tigergraph
