@@ -54,7 +54,13 @@ Other additions:
 
 ## Dependencies
 
-State any dependencies and their versions needed to be installed to test this project. This may include programming languages, frameworks, libraries, and etc. 
+  * [Docker](https://docs.docker.com/engine/install/)
+  * [Tigergraph](https://docs.tigergraph.com/tigergraph-server/current/getting-started/docker)(version : 3.5.0)
+  * [Python In Docker Container](https://docs.docker.com/engine/install/) (version > 3.0)
+  * [Node.js and npm package manager](https://nodejs.org/en/download/)   
+  * [Webserver] [apache](https://httpd.apache.org/docs/2.4/install.html) or [nginx](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/)  
+  
+
 
 ## Installation
 
