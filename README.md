@@ -46,7 +46,7 @@ Tell us how your entry was the most...
 
 Other additions: 
 
- - **Data**: The [Rasters images](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2 https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
+ - **Data**: The Rasters images ([image1](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2) [image2](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2)) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
  - **Technology Stack**: 
     - In data preparation we have used **python** as programming language. 
     - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
