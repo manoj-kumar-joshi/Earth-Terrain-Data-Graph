@@ -77,7 +77,7 @@ This can include:
 Since our objective is to empower volunteers at the time of crisis, we want to take this prototype to a minimum viable product level and explore its practical usage with various organizations.
 We also plan to integrate more features to the applications and graph and work with Open data Cube project to gather near real time satellite imagery and other kind of data.
 
-##### Future Vision 
+#### Future Vision 
 - Build regular pipeline from Satellite data to TigerGraph 
   - Integrate data pipeline directly with open data cubes like “DIGITAL EARTH AFRICA” and “DIGITAL EARTH AUSTRALIA” to have a near real time update of Earth observation data into tigergraph.
 - Expand applications for Rescue teams and Volunteers
@@ -85,7 +85,7 @@ We also plan to integrate more features to the applications and graph and work w
 Develop Mobile applications which can interact with Tigergraph along with other 
 - Collaborate with organizations like disastercharter.org
   - Collaborate with various organizations who are helping co-ordinated Search and rescue and facilitate them with our solution.
-
+<img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot6.png" width="420px" height="280px"/>
 
 
 ## Reflections
