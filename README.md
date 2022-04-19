@@ -1,11 +1,9 @@
-# Earth-Terrain-Data-Graph
-Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combing Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
 
 # Earth-Terrain-Data-Graph
-**Contributers and Contact Information: 
-Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
-Ashok Barthwal (Email:- ashok.barthwal@electronbridge.com)
-yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)**
+**Contributers and Contact Information: **
+- Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
+- Ashok Barthwal (Email:- ashok.barthwal@electronbridge.com)
+- yogesh Kumar (Email:- yogesh.kumar@electronbridge.com)
 
 **Problem Statement : [Empower Rescue team and Volunteers with Earth Observation Data ]**
 Earth observation data is crucial in natural/disaster response and other accidental stranded people cases in national parks and mountains. In case of a natural disaster large number of resources are needed to provide timely help to the victims. A co-ordinated effort between global or local disaster response team and volunteers makes a key difference. Latest observation data from satellites plays a key role. Although many Search and Rescue organizations are already utilizing satellite data in different ways (Mostly GIS), we think we can take this to next level. With availability of scalable graph like TigerGraph, it is possible to store earth observation data in terms of Vertices and Relationships which leads to faster availability of insights out of this data specially terrain traversal applications for rescue teams and volunteers.
@@ -27,6 +25,8 @@ Earth observation data is crucial in natural/disaster response and other acciden
 - Create query interfaces to this data to generate insights like terrain traversal applications.
 
 **Description**: 
+
+Earth observation/geography data is available from Satellite and OpenStreetMap (OSM). We attempt to solve difficult terrain problems by combing Satellite/OSM data and TigerGraph. With the combination of Tiger Graph and Geo-Spatial we can visualize geo-spatial use cases with respect to graph.
 
 - We created UDF functions with the help of C bindings of uber H3. This allow us to call geo-spatial functions while traversing TigerGraph.
 - We then did some pre-processing for our sample of satellite data. Which is elevation and multi spectral images gathered from USGS and Sentinel 2. In this pre-processing we aggregated Earth observation attributes at resolution 10,11 and 12 respectively and populated graph with it.
