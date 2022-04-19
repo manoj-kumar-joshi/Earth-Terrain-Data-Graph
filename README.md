@@ -66,7 +66,7 @@ Other additions:
 
 In the project we have three differnt sub-modules.Install sub modules as per below hierarchy only.
 
-- Data preparation (**You can skip as tigergraph import file is already exported with data**).
+- Data preparation (**You can skip as in tigergraph import zip file is already exported with data**).
   - [Steps For Data Preparation](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation)
 - Tigergraph schema and UDF function installations.
   - [Steps To Import Tigergraph and Install UDF Functions](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/src)
@@ -76,7 +76,9 @@ In the project we have three differnt sub-modules.Install sub modules as per bel
 
 
 
-## Future Improvements
+## Limitations Future Improvements
+
+For demo purpose we have use limited data of Santa Rosa Island of California.
 
 Since our objective is to empower volunteers at the time of crisis, we want to take this prototype to a minimum viable product level and explore its practical usage with various organizations.
 We also plan to integrate more features to the applications and graph and work with Open data Cube project to gather near real time satellite imagery and other kind of data.
