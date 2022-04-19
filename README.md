@@ -39,10 +39,29 @@ Earth observation/geography data is available from Satellite and OpenStreetMap (
 
 Tell us how your entry was the most...					
 
-- Impactful in solving a real world problem 
-- Innovative use case of graph
-- Ambitious and complex graph
+-  Impactfulness:
+    - Natural disasters all around the world in the year 2008 to 2020 caused around 10 Millions injured and around 40 Millions displaced. For details [click here](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL) Global and local search and rescue missions are launched every year around the world for stranded people as a result of natural disasters or otherwise. In the USA alone between 1992 and 2007 a total of 65,439 "Search and Rescue" (SAR) missions were conducted in National Parks. For reference [click here] ( https://www.researchgate.net/figure/Total-search-and-rescue-SAR-costs-incidents-fatalities-illness-or-injured_tbl1_26795932.)
+- Innovativeness:
+    - Existing technologies mostly utilize Digital Elevation and other earth observation data to create maps and info graphs [ref](https://www.esri.com/news/arcuser/0799/demdemo.html). Because of the challenges of processing huge amount of data and lack of faster relations based search prevent other technologies to create land traversal solutions using earth observation data.
+
+    - We are trying to solve this problem the graph way. Despite Tigergraph being a high performance graph DB, we faced tow major challenges which we solved in an innovative way.
+
+    - Our dataset has 607,624 vertices and 3,624,018 edges for smallest Resolution 12. Running traditional search algorithms were very slow. We also had to keep track of Maximum smoothness, Minimum Distance and Minimum elevation. We solved these challenges by using a variation of A-Start algorithm along with some control functions to control directions of search. We also developed a multi resolution search method to dramatically reduce number of vertices to be searched. This video (https://www.youtube.com/watch?v=U5CQGo82_Z8) discusses challenges and how we solved them.
+    
+- Ambitious and complex graph:
+    - We ingested data from a relatively small area Santa Rosa Island, USA. This island is only 215 Square Km. When we created H3 resolution 10,11 and 12 vertices it constituted 708,882 Vertices (with 5 attributes) and 4,220,226 Edges.
+
+    - We implemented 3 Path traversal algorithms (one for each resolution) , 1 recursive algorithm for performance and 1 Shortest path to openstreetmap road. A typical 5 km long trail smoothest path search needs 274 hops to reach destination (which it does in 1 or 2 seconds).
+
+    - The algorithms we developed reduce the vertices to be considered for search and restrict search to an elliptical area using a control function. This way our solution is scalable to very large areas as well as it wont matter if number of vertices are increased.
+    
 - Applicable graph solution 
+    - With the availability of satellite images via APIs ([ref](https://www.sentinel-hub.com/develop/api/) it is easy to launch this system to deliver path traversal based out of latest available data.
+
+    -Apart from search and rescue organizations and volunteers our solution will also be very useful in "Road planning", "Natural Gas and water pipelines" For reference plz visit following links ..
+        - https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=8173&context=etd_theses
+        - https://www.researchgate.net/publication/263058158_GIS-Based_Route_Planning_in_Landslide-Prone_Areas
+        - https://proceedings.esri.com/library/userconf/proc10/uc/papers/pap_1392.pdf
 
 Other additions: 
 
