@@ -260,7 +260,9 @@ H3 is a geospatial indexing system that partitions the world into hexagonal cell
       
 ### Useful Links
   * [Uber H3](https://h3geo.org/)
+  * [Tigergraph Installation](https://docs.tigergraph.com/tigergraph-server/current/getting-started/docker)
   * [Tigergraph UDF](https://docs-legacy.tigergraph.com/dev/gsql-ref/querying/func/query-user-defined-functions)
+  * [Docker Installation](https://docs.docker.com/engine/install/)
 
 ## License
 
