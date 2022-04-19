@@ -46,14 +46,20 @@ Tell us how your entry was the most...
 
 Other additions: 
 
- - **Data**: The Rasters images ([image1](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2) [image2](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2)) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc.. After processing the resulting data will contain the csv containing hex_id against every point and its elevation etc with grouping.
+ - **Data**: The Rasters images ([image1](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B04.jp2),[image2](https://demo.electronbridge.com/os/images/T10SGC_20220307T184229_B08.jp2)) of the Santa Rosa island are taken from sentinel satellite open source image for different bands(red band and near infrared band) with some elevation related information etc. After processing the resulting data will contain the csv ([res_10_nodes](https://demo.electronbridge.com/os/csv/dem_nodes_res_10.csv),
+[res_11_nodes](https://demo.electronbridge.com/os/csv/dem_nodes_res_11.csv),
+[res_12_nodes](https://demo.electronbridge.com/os/csv/dem_nodes_res_12.csv),
+[res_10_edges](https://demo.electronbridge.com/os/csv/dem_edges_res_10.csv),
+[res_12_edges](https://demo.electronbridge.com/os/csv/dem_edges_res_11.csv),
+[res_12_edges](https://demo.electronbridge.com/os/csv/dem_edges_res_12.csv)
+) containing hex_id against every point and its elevation etc with grouping.
  - **Technology Stack**: 
     - In data preparation we have used **python** as programming language. 
     - In UDF Functions we used  **C/C++ library h3** and used C/C++ as programming language. 
     - In Backend API we have used **Node.js** as programming language. 
     - In User Interface we have used **HTML5, jquery** as programming language. 
  - **Video**: Feel free to include other images or videos to better demonstrate your work.
- - **Preview on**
+ - **Demo preview on**
     - [Discover trail to nearest road in hilly area](https://demo.electronbridge.com/os/TigerGraphEB/)
     - [Road or Pipeline layout path planning](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)
 
