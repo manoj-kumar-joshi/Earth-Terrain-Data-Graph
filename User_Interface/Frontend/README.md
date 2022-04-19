@@ -55,6 +55,7 @@ Visit http://127.0.0.1/frontend to load the demo.
 
 #### Useful Utilities
 
+- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/)
 - http://geojson.io
 - [Turf.js](https://turfjs.org)
 - https://getbootstrap.com/
