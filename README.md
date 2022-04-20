@@ -83,9 +83,9 @@ Other additions:
     - In User Interface we have used **HTML5, jquery** as programming language. 
  - **Video**: 
     - [Solution Demo for Challenge Submission](https://youtu.be/DDf4TPmHFXU)
-    - [Earth Observation and Graph Showcase Video](https://youtu.be/N9Qq0ecgGAE)
-    - [Find Path Using Terrain Elevation And Smoothness Video](https://youtu.be/U5CQGo82_Z8)
-    - [Find Path To Nearest Road Using TigerGraph Video](https://youtu.be/U4KBaAVaVcw)
+    - [Earth Observation and Graph Showcase ](https://youtu.be/N9Qq0ecgGAE)
+    - [Find Path Using Terrain Elevation And Smoothness ](https://youtu.be/U5CQGo82_Z8)
+    - [Find Path To Nearest Road Using TigerGraph ](https://youtu.be/U4KBaAVaVcw)
  - **Demo**
     - [Discover trail to nearest road in hilly area](https://demo.electronbridge.com/os/TigerGraphEB/)
     - [Road or Pipeline layout path planning](https://demo.electronbridge.com/os/TigerGraphEB/trailroad.html)
