@@ -102,16 +102,15 @@ Other additions:
 
 ## Installation
 
-In the project we have three differnt sub-modules. Install sub modules as per below hierarchy only.
+In the project we have three sub-modules. In order to replicate the project you only need to follow "Tigergraph schema and UDF function installations" and "User interface and API'S to communicate with UI". Tigergraph solution export files already contain the data required.
 
-- Data preparation (**You can skip as tigergraph imported zip file is already exported with data**).
-  - [Steps For Data Preparation](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation)
-- Tigergraph schema and UDF function installations.
+1- Tigergraph schema and UDF function installations.
   - [Steps To Import Tigergraph and Install UDF Functions](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/src)
-- User interface and API'S to communicate with UI.
+2- User interface and API'S to communicate with UI.
   - [API'S](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/User_Interface/Backend)
   - [UI](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/User_Interface/Frontend)
-
+3- Optional Data preparation (**Please explore only to see how we pre-processed the data**).
+  - [Steps For Data Preparation](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/tree/main/data_generation)
 
 
 ## Limitations And Future Improvements
