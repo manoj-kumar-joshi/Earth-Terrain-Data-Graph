@@ -132,10 +132,6 @@ Develop Mobile applications which can interact with Tigergraph along with other
 <img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot6.png" width="420px" height="280px"/>
 
 
-## Reflections
-
-Review the steps you took to create this project and the resources you were provided. Feel free to indiciate room for improvement and general reflections.
-
 ## References
 
 - [ourworldindata.org](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL)
