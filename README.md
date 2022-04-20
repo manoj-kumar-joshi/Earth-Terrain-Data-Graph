@@ -35,9 +35,7 @@ Earth observation/geography data is available from Satellite and OpenStreetMap (
 - We then created and optimized our queries related to traversal based on surface elevation, smoothness and distance. We kept vegetation as an extra attribute.
 - After that we created front end graphical interfaces to utilize these queries.
 <img src="https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/blob/main/User_Interface/Frontend/assets/img/screenshots/Screenshot5.png" width="420px" height="280px"/>
-
-
-Tell us how your entry was the most...					
+			
 
 -  Impactfulness:
     - Natural disasters all around the world in the year 2008 to 2020 caused around 10 Millions injured and around 40 Millions displaced. For details [click here](https://ourworldindata.org/explorers/natural-disasters?tab=map&facet=none&Disaster+Type=All+disasters&Impact=Injuries&Timespan=Decadal+average&Per+capita=false&country=%7EOWID_WRL) Global and local search and rescue missions are launched every year around the world for stranded people as a result of natural disasters or otherwise. In the USA alone between 1992 and 2007 a total of 65,439 "Search and Rescue" (SAR) missions were conducted in National Parks. For reference [See]( https://www.researchgate.net/figure/Total-search-and-rescue-SAR-costs-incidents-fatalities-illness-or-injured_tbl1_26795932.)
