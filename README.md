@@ -48,7 +48,7 @@ Earth observation/geography data is available from Satellite and OpenStreetMap (
 	    - The kind of data structure needed to build on-demand insight applications were also evolving (Till Graphs became scalable databases)
     - Existing technologies mostly utilize Digital Elevation and other earth observation data to create maps and info graphs [ref](https://www.esri.com/news/arcuser/0799/demdemo.html). Because of the challenges of processing huge amount of data and lack of faster relations based search prevent other technologies to create land traversal solutions using earth observation data.
     - Despite Tigergraph being a high performance graph DB, we faced performance challenges which we solved in an innovative ways. Our dataset has 607,624 vertices and 3,624,018 edges for smallest Resolution 12. Running traditional search algorithms were very slow. We also had to keep track of Maximum smoothness, Minimum Distance and Minimum elevation. 
-    - We solved these challenges by using a variation of A-Start algorithm along with some control functions to control directions of search. We also developed a multi resolution search method to dramatically reduce number of vertices to be searched. This video (https://www.youtube.com/watch?v=U5CQGo82_Z8) discusses challenges and how we solved them.
+    - We solved these challenges by using a variation of A-Start algorithm along with some control functions to control directions of search. We also developed a multi resolution search method to dramatically reduce number of vertices to be searched. This video (https://www.youtube.com/watch?v=n5YB-a0M7GU) discusses challenges and how we solved them.
 
     
 - Ambitious and complex graph:
