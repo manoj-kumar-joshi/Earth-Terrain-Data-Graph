@@ -1,7 +1,5 @@
 # Earth Terrain Data Graph
 
-### 👉 [Getting Started](https://github.com/ElectronBridge/Earth-Terrain-Data-Graph/edit/main/README.md#installation)
-
 #### Contributers and Contact Information: 
 
 - Manoj Kumar Joshi (Email:- manoj@electronbridge.com)
